@@ -1168,14 +1168,14 @@ a:hover {
   }
   
   .mobile-get-started {
-    display: block;
+    display: none; /* Hide mobile get started button in favor of hamburger menu */
   }
   
   .mobile-menu-toggle {
-    display: none; /* Hide hamburger menu completely */
+    display: flex; /* Show hamburger menu toggle */
   }
   
-  /* Simplified mobile header with only Get Started button */
+  /* Mobile header with hamburger menu */
   .header-content {
     justify-content: space-between;
   }
