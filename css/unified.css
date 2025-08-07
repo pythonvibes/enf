@@ -192,13 +192,8 @@ a:hover {
 }
 
 /* Mobile-only Get Started Button */
-.mobile-get-started {
-  display: none;
-}
-
-/* Mobile Menu Toggle - Simplified */
 .mobile-menu-toggle {
-  display: none;
+  display: none; /* Hidden by default, shown on mobile */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -339,11 +334,11 @@ a:hover {
 .hero-redesigned {
   background: var(--gradient-hero);
   color: var(--white);
-  padding: var(--space-24) 0;
+  padding: var(--space-16) 0; /* Reduced padding for more compact design */
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 60vh; /* Reduced height for packages page */
   display: flex;
   align-items: center;
 }
@@ -630,6 +625,43 @@ a:hover {
 .section-gradient .card:hover {
   background: var(--white);
   transform: translateY(-8px);
+}
+
+/* Card Icon Improvements for Better Visibility */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--gradient-button);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.card-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--white);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.card:hover .card-icon {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Enhanced text contrast for cards in gradient sections */
+.section-gradient .card h3 {
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.section-gradient .card p {
+  color: var(--gray-700);
+  font-weight: 500;
 }
 
 /* Feature Cards */
@@ -1162,20 +1194,20 @@ a:hover {
     padding: 0 var(--space-4);
   }
   
-  /* Mobile Header Simplification */
+  /* Mobile Navigation */
   .nav-menu {
     display: none;
   }
   
-  .mobile-get-started {
-    display: block;
-  }
-  
   .mobile-menu-toggle {
-    display: none; /* Hide hamburger menu completely */
+    display: flex;
   }
   
-  /* Simplified mobile header with only Get Started button */
+  /* Show Get Started button on mobile */
+  .btn.btn-primary {
+    display: inline-flex;
+  }
+  
   .header-content {
     justify-content: space-between;
   }
@@ -1216,7 +1248,7 @@ a:hover {
   }
   
   .hero-redesigned {
-    min-height: 60vh;
+    min-height: 50vh; /* Further reduced for mobile */
     padding: var(--space-16) 0 var(--space-12);
   }
   
